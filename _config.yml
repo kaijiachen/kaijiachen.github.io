@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Kaijia Chen"
-  avatar           : "/images/Headshot.jpg"
+  avatar           : "Headshot.jpg"
   bio              : "Rice University"
   location         : "Houston, TX"
   employer         :
