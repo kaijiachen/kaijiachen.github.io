@@ -11,9 +11,9 @@ title                    : "Kaijia Chen"
 title_separator          : "-"
 name                     : &name "Kaijia Chen"
 description              : &description "personal description"
-url                      : "https://kc222-bot.github.io"
-baseurl                  : "/kaijiachen.github.io"
-repository                : "kaijiachen.github.io"
+url                      : "https://kaijiachen.github.io"
+baseurl                  : "kaijiachen/kaijiachen.github.io"
+repository                : "kaijiachen/kaijiachen.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
