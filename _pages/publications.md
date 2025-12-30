@@ -13,25 +13,25 @@ author_profile: true
 <ul>
   <li>
     <span class="bibtex-protected">
-      <span class="bibtex-protected"><b>K. Chen</b></span> et al.
+      H. Tanoto, Z. Zhou, <b>K. Chen</b>, R. Qiu, H. Fan, J.Z. Chen, E. Milton, Y. Zhou, and M. Liu.
     </span>
-    Minimally invasive healing of bone implant-cement interfaces by aerogel cement and remote heating.
-    In <em>Device</em>. 2025.
-    URL:
-    <a href="https://www.cell.com/device/home">
-      https://www.cell.com/device/home
+    Predicting Biaxial Failure Strengths of Aortic Tissues Using a Dispersed Fiber Failure Model.
+    In <em>Extreme Mechanics Letters</em>. 2025.
+    DOI:
+    <a href="https://doi.org/10.1016/j.eml.2024.102287">
+      https://doi.org/10.1016/j.eml.2024.102287
     </a>.
   </li>
 
   <li>
     <span class="bibtex-protected">
-      <span class="bibtex-protected"><b>K. Chen</b></span> et al.
+      C. Lavelle, Y. Wang, H. Tanoto, <b>K. Chen</b>, E. Milton, Y. Zhou, and X. Dong.
     </span>
-    Predicting biaxial failure strengths of aortic tissues using a dispersed fiber failure model.
-    In <em>Extreme Mechanics Letters</em>. 2025.
-    URL:
-    <a href="https://www.sciencedirect.com/journal/extreme-mechanics-letters">
-      https://www.sciencedirect.com/journal/extreme-mechanics-letters
+    Minimally Invasive Healing of the Bone Implant-Cement Interface by Aerogel-Cement and Remote Heating.
+    In <em>Device</em>. 2025.
+    DOI:
+    <a href="https://doi.org/10.1016/j.device.2024.100680">
+      https://doi.org/10.1016/j.device.2024.100680
     </a>.
   </li>
 </ul>
