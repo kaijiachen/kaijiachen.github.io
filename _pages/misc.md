@@ -10,3 +10,8 @@ author_profile: true
 
 <b>Running:</b> I enjoy running and have been running a daily 5K since 2021.
 
+<figure>
+  <img src="Rice_Group" alt="CARA Fall 2025" width="300">
+  <figcaption>Title for Image 1</figcaption>
+</figure>
+
