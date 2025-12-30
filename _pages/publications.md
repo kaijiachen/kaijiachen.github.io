@@ -53,7 +53,7 @@ author_profile: true
   <span class="bibtex-protected">
     Certified SOLIDWORKS Design Associate (CSWA)
   </span>
-  — Dassault Systèmes / 3DEXPERIENCE® Certification Center.   
+  — Dassault Systèmes  
   <a href="https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-3562LGBXP7">
     Certificate Verification
   </a>.
