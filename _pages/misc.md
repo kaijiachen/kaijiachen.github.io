@@ -12,39 +12,27 @@ author_profile: true
 
 <b>Photo Gallery:</b> A collection of memorable moments from recent years.
 
-<div style="display:flex; gap:24px;">
-  <figure>
-    <img src="/images/Rice_Group.jpg" width="300">
-    <figcaption>Rice University CARA Lab — Fall 2025</figcaption>
-  </figure>
-
-  <figure>
-    <img src="/images/Graduation2025.jpg" width="300">
-    <figcaption>Vanderbilt University Commencement — 2025</figcaption>
-  </figure>
-</div>
-
 <figure>
-  <img src="/images/Rice_Group.jpg" alt="CARA Lab Fall 2025" width="300">
+  <img src="/images/Rice_Group.jpg" alt="CARA Lab Fall 2025" width="100">
   <figcaption>Rice University CARA Lab — Fall 2025</figcaption>
 </figure>
 
 <figure>
-  <img src="/images/Coloplast2.jpg" alt="Coloplast Interventional Urology 2025" width="300">
+  <img src="/images/Coloplast2.jpg" alt="Coloplast Interventional Urology 2025" width="100">
   <figcaption>Coloplast Interventional Urology — Summer 2025</figcaption>
 </figure>
 
 <figure>
-  <img src="/images/Graduation2025.jpg" alt="Vanderbilt University Commencement 2025" width="300">
+  <img src="/images/Graduation2025.jpg" alt="Vanderbilt University Commencement 2025" width="100">
   <figcaption>Vanderbilt University Commencement — Spring 2025</figcaption>
 </figure>
 
 <figure>
-  <img src="/images/Coloplast.jpg" alt="Coloplast Interventional Urology 2024" width="300">
+  <img src="/images/Coloplast.jpg" alt="Coloplast Interventional Urology 2024" width="100">
   <figcaption>Coloplast Interventional Urology — Summer 2024</figcaption>
 </figure>
 
 <figure>
-  <img src="/images/Mayfield.jpg" alt="Mayfield Living Learning Lodge Program" width="300">
+  <img src="/images/Mayfield.jpg" alt="Mayfield Living Learning Lodge Program" width="100">
   <figcaption>Vanderbilt Mayfield Living Learning Lodge Program — 2022–2023</figcaption>
 </figure>
