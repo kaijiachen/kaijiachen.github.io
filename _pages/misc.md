@@ -12,6 +12,18 @@ author_profile: true
 
 <b>Photo Gallery:</b> A collection of memorable moments from recent years.
 
+<div style="display:flex; gap:24px;">
+  <figure>
+    <img src="/images/Rice_Group.jpg" width="300">
+    <figcaption>Rice University CARA Lab — Fall 2025</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/images/Graduation2025.jpg" width="300">
+    <figcaption>Vanderbilt University Commencement — 2025</figcaption>
+  </figure>
+</div>
+
 <figure>
   <img src="/images/Rice_Group.jpg" alt="CARA Lab Fall 2025" width="300">
   <figcaption>Rice University CARA Lab — Fall 2025</figcaption>
