@@ -6,11 +6,11 @@ author_profile: true
 ---
 
 ***
-# Reliable control of complex systems
+# When Tires Slip on Purpose: Drift-Based Control for Vehicle Safety
 
-With the rapid advancement of robotics and artificial intelligence, robotic systems are increasingly expected to operate at high speeds and near the limits of stability. However, the ability to control such systems safely and reliably under **uncertainty and model mismatch** has not kept pace with their growing complexity and autonomy, particularly for inherently unstable tasks.
+As robotic systems are increasingly deployed in fast, safety-critical settings, reliance on conservative control alone becomes a fundamental limitation. In autonomous driving, many existing approaches restrict vehicle behavior to simplified, easily stabilized regimes. Although effective in nominal operation, this conservatism reduces a vehicle’s ability to react rapidly in rare but critical scenarios, such as abrupt obstacle avoidance on the highway.
 
-Entering my Ph.D., I aim to develop and implement **learning-enabled nonlinear control frameworks** for fast, safety-critical robotic systems. My current research focuses on integrating data-driven models and online optimization within nonlinear MPC to improve performance while preserving stability and safety guarantees.
+My research addresses these challenges by developing **learning-enabled nonlinear MPC frameworks** that combine data-driven modeling with online optimization, enabling robotic vehicles to operate aggressively while maintaining safety and robustness in the presence of model mismatch and uncertainty. 
 
 My current work at [CARA LAB](https://cara-lab-rice.github.io/) focuses on automated vehicle control beyond stability limits, with results coming soon!
 
