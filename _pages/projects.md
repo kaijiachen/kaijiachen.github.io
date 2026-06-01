@@ -14,9 +14,7 @@ My research addresses these challenges by developing **learning-enabled nonlinea
 
 My current work at [CARA LAB](https://cara-lab-rice.github.io/) focuses on automated vehicle control beyond stability limits, with results coming soon!
 
-<p>
-  One early demonstration is an autonomous drift-initialization experiment on a 1:10-scale Traxxas Mustang RC vehicle platform. Using proportional yaw-rate feedback control, the vehicle first induces rear-tire saturation through a throttle/steering maneuver, then applies real-time counter-steering to regulate yaw rate during drift entry.
-</p>
+One early demonstration is an autonomous drift-initialization experiment on a 1:10-scale Traxxas Mustang RC vehicle platform. Using proportional yaw-rate feedback control, the vehicle first induces rear-tire saturation through a throttle/steering maneuver, then applies real-time counter-steering to regulate yaw rate during drift entry.
 
 <div class="video-container">
   <iframe
