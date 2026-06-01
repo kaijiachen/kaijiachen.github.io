@@ -16,7 +16,7 @@ My current work at [CARA LAB](https://cara-lab-rice.github.io/) focuses on autom
 
 One early demonstration is an autonomous drift-initialization experiment on a 1:10-scale Traxxas Mustang RC vehicle platform. Using proportional yaw-rate feedback control, the vehicle first induces rear-tire saturation through a throttle/steering maneuver, then applies real-time counter-steering to regulate yaw rate during drift entry.
 
-src="https://www.youtube.com/embed/GsZZ30_wEt4"
+[![Autonomous RC Car Drift Initialization Demo](https://img.youtube.com/vi/GsZZ30_wEt4/hqdefault.jpg)](https://youtube.com/shorts/GsZZ30_wEt4)
 
 
 # Undergraduate research
