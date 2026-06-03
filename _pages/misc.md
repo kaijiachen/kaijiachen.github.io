@@ -12,7 +12,7 @@ author_profile: true
 
 <b>Music:</b> I enjoy a wide range of genres, including country, hard rock, EDM, and basically everything!
 <ul>
-  <li>You look like you love me — Ella Langley, Riley Green</li>
+  <li>There's Your Trouble — The Chicks</li>
   <li>I Just Want to Dance with You — George Strait</li>
   <li>It's a Long Way to the Top (If You Wanna Rock 'n' Roll) — AC/DC</li>
 </ul>
