@@ -8,15 +8,17 @@ author_profile: true
 ***
 # When Tires Slip on Purpose: Drift-Based Control for Vehicle Safety
 
-As robotic systems are increasingly deployed in fast, safety-critical settings, reliance on conservative control alone becomes a fundamental limitation. In autonomous driving, many existing approaches restrict vehicle behavior to simplified, easily stabilized regimes. Although effective in nominal operation, this conservatism reduces a vehicle’s ability to react rapidly in rare but critical scenarios, such as abrupt obstacle avoidance on the highway.
+As robotic systems are deployed in increasingly fast and safety-critical environments, overly conservative control can limit their ability to respond effectively in rare but critical situations. In autonomous driving, for example, restricting a vehicle to easily stabilized operating conditions may reduce its ability to perform rapid maneuvers such as emergency obstacle avoidance. 
 
-My research addresses these challenges by developing **learning-enabled nonlinear MPC frameworks** that combine data-driven modeling with online optimization, enabling robotic vehicles to operate aggressively while maintaining safety and robustness in the presence of model mismatch and uncertainty. 
+My research develops learning-enabled controllers that combine data-driven modeling, nonlinear control, and online optimization to help robotic systems operate safely near their physical limits despite uncertainty and model mismatch. In particular, I study how autonomous vehicles can maintain stability and recover from highly dynamic or unstable conditions, such as drifting. 
+
+Through both theoretical development and experimental validation on real robotic platforms, my goal is to create control frameworks that deliver high performance while providing meaningful guarantees of safety, robustness, and reliability.
 
 My current work at [CARA LAB](https://cara-lab-rice.github.io/) focuses on automated vehicle control beyond stability limits, with results coming soon!
 
 [![Autonomous RC Car Drift Initialization Demo](https://img.youtube.com/vi/7-5caENWSPI/0.jpg)](https://www.youtube.com/watch?v=7-5caENWSPI)
 
-LQR-based full-state feedback control implemented on a Traxxas 1:10 Mustang platform for autonomous donut drifting. The system runs closed-loop control using Mocap feedback. 
+LQR-style feedback control implemented on a Traxxas 1:10 Mustang platform for autonomous donut drifting. 
 
 # Undergraduate research
 
