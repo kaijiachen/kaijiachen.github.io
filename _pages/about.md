@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 My name is Kaijia Chen, and I am a Ph.D. student in the Department of Mechanical Engineering at [Rice University](https://www.rice.edu)
-advised by [Sasha Davydov](https://davydovalexander.github.io/) at [CARA Lab](https://cara-lab-rice.github.io/). My research lies at the intersection of **robotics, control, and machine learning**, with the broader goal of developing the next generation of autonomous systems that people can trust. I focus on data-driven control methods that enable fast, complex physical systems to operate safely, reliably, and predictably in uncertain environments.
+advised by [Sasha Davydov](https://davydovalexander.github.io/) at [CARA Lab](https://cara-lab-rice.github.io/). My research lies at the intersection of **robotics, control, and machine learning**, with the broader goal of developing the next generation of autonomous systems that people can trust. I focus on data-driven control methods that enable fast, complex physical systems to operate safely, reliably, and predictably in uncertain environments. [View my projects](https://kaijiachen.github.io/projects/)
 
 In Spring 2025, I completed my Bachelor’s degree at [Vanderbilt University](https://www.vanderbilt.edu), where I majored in Mechanical Engineering with a minor in Computer Science. During my undergraduate studies, I researched with Dr. Xiaoguang Dong at the [Miniature Robotics Lab](https://sites.google.com/view/donglab) and Dr. David Braun at the [Advanced Robotics & Control Lab](https://davidbraunrobotics.com). I also interned twice at Coloplast Corp. as an R&D Engineer, working on the design and development of medical devices.
 
