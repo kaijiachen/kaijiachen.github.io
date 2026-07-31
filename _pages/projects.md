@@ -32,6 +32,8 @@ Representative projects include:
 
 3) Senior Design - [An Implantable Finger Prosthetic](https://kaijiasresearch.godaddysites.com/finger-prosthetic)
 
+For more details about my projects, please visit my undergraduate personal website. [View my Undergraduate Website](https://kaijiasresearch.godaddysites.com/)
+
 # Class projects
 
 1) Nonlinear System Analysis & Control: [The Control of a two-link robot manipulator](https://drive.google.com/file/d/1Pj5eOyawrSS5wAX1YZMAgVT9jrD7OW5Z/view?usp=sharing)
