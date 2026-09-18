@@ -9,78 +9,49 @@ author_profile: true
 
 # Teaching a Car to Drift
 
-**The goal is simple to state and hard to do: make an autonomous car lose traction on purpose, and keep it exactly where I want it.**
+**The goal is simple to state and hard to do: make an autonomous car lose traction on purpose — and keep it exactly where I want it.**
 
-Most autonomous vehicles are built to never get near the edge. Stay below the friction limit, keep the tires gripping, keep the math linear — and the car is easy to control. That works right up until the moment it doesn't: a child steps out from behind a parked van, a patch of black ice appears at 60 mph, a truck jackknifes across two lanes. In those moments the safest trajectory is often *not* the one that keeps the tires gripping. It is the one that a rally driver would take — brake late, throw the car sideways, and steer with the rear.
+Most autonomous vehicles are built to never get near the edge: stay below the friction limit, keep the tires gripping, keep the math linear. That works right up until it doesn't — black ice, a child stepping out from behind a parked van, a truck jackknifing across two lanes. In those moments the safest move is often the one a rally driver would make: throw the car sideways and steer with the rear. Human experts do this with no model and no solver. My work is about giving a machine the same ability, with math behind it instead of intuition.
 
-Human experts do this. They do it with no model, no solver, and about 200 ms of reaction time. My work is about giving a machine the same ability, but with math behind it instead of intuition.
+## Why it's hard
 
-## Why is this hard?
+Drifting runs off the end of every assumption that makes vehicle control easy. The tires are **saturated**, so asking for more force gives you less — the linear machinery stops being valid exactly when you need it. The drift itself is a **real but unstable equilibrium**: left alone the car spins or straightens out within a fraction of a second, so holding a drift is closer to balancing an inverted pendulum than to following a lane. And the **model is never quite right** — tire-road friction changes with surface, temperature, and weather — while the decisions have to be made in tens of milliseconds, with steering and throttle already pinned near their limits.
 
-Drifting is what happens when you drive a car off the end of every assumption that makes vehicle control tractable.
+## Why it's worth studying
 
-- **The tires are saturated.** Below the limit, lateral tire force is roughly proportional to slip angle — a straight line, and a controls engineer's best friend. At the limit, that line bends over and flattens out. Ask for more force and the tire gives you *less*. All the standard linear machinery quietly stops being valid exactly when you need it most.
-- **The equilibrium you want is unstable.** A steady-state drift is a real equilibrium of the vehicle dynamics — but it is a **saddle point**. Left alone, the car does not stay in it; it spins or straightens out within a fraction of a second. Balancing a drift is closer to balancing an inverted pendulum than to following a lane.
-- **The model is wrong, and it's wrong differently every day.** Tire-road friction $\mu$ changes with temperature, surface, rubber wear, and whether it rained an hour ago. A controller that needs an exact friction coefficient is a controller that works in simulation.
-- **The clock is brutal.** Recovery decisions live on a ~10–50 ms timescale. Whatever the controller does, it has to do it *now*, at the limits of actuation, with steering and throttle already pinned near their bounds.
+Everything past the friction limit is where crashes happen.
 
-## Why is it worth it?
+- **Emergency maneuvers.** Avoiding an obstacle at highway speed can demand more lateral acceleration than a grip-limited controller is willing to ask for.
+- **Ice, snow, gravel, rain.** On low-friction surfaces, ordinary driving already lives at the limit — "never lose grip" isn't a strategy there.
+- **Recovery, not just avoidance.** A car that's already sliding is *already* in the unstable regime. A controller that only knows the linear region has nothing useful to say.
+- **It generalizes.** The real question isn't cars: how do you guarantee performance in the regime where a robot's model is least trustworthy?
 
-Because everything past the friction limit is where crashes happen.
+## The approach: model predictive control
 
-- **Emergency maneuvers.** Obstacle avoidance at highway speed can demand more lateral acceleration than a grip-limited controller is willing to ask for. A vehicle that can operate *through* saturation has strictly more options than one that can't.
-- **Ice, snow, gravel, rain.** On low-friction surfaces, ordinary driving already lives near the limit. "Never lose grip" is not a strategy there — it's an assumption that has already failed.
-- **Recovery, not just avoidance.** Once a car is sliding — from ice, a gust, a blown tire — it is *already* in the unstable regime. A controller that only knows how to drive in the linear region has nothing useful to say. One that can stabilize a drift can bring the car back.
-- **It generalizes.** The real research question isn't cars. It's: *how do you give a robot performance guarantees in the regime where its model is least trustworthy?* That question shows up again in legged robots, aerial vehicles, and manipulation.
-
-## How: model predictive control around an unstable equilibrium
-
-The vehicle is modeled as a single-track ("bicycle") model, where the interesting physics lives entirely in the tire force curves:
+I steer the car toward a **drift equilibrium** $x^\star$ — a sideways state that the physics will sustain, but won't hold on its own. At every timestep the controller looks a short horizon into the future, picks the best sequence of moves, and applies only the first one:
 
 $$
-\begin{aligned}
-m V (\dot{\beta} + r) &= F_{yf}\cos\delta + F_{yr} \\
-I_z \dot{r} &= a\, F_{yf}\cos\delta - b\, F_{yr}
-\end{aligned}
+\min_{u_{0:N-1}} \; \sum_{k=0}^{N-1} \|x_k - x^\star\|_Q^2 + \|u_k - u^\star\|_R^2
+\quad \text{s.t.} \quad x_{k+1} = f(x_k, u_k), \;\; u_k \in \mathcal{U}
 $$
 
-with sideslip $\beta$, yaw rate $r$, steering $\delta$, and lateral tire forces given by a saturating (Pacejka-style) law
+Then it throws the rest away, re-measures, and solves again — thousands of times a minute. That constant re-planning is what makes it possible to sit on an unstable equilibrium: the feedback loop closes faster than the instability can grow, and the constraint set $\mathcal{U}$ encodes real limits ("the steering rack stops here") as part of the problem rather than as an afterthought.
 
-$$
-F_{y} = -\,\mu F_z \sin\!\big(C \arctan(B\,\alpha)\big),
-$$
+## What's next: learning with guarantees
 
-Here $\alpha$ is the slip angle. The $\arctan$ is the whole story: it is linear near zero, then flattens. A **drift equilibrium** $x^\star = (V^\star, \beta^\star, r^\star)$ is a fixed point of these dynamics with the rear tire *fully saturated*, $|F_{yr}| = \mu F_{zr}$ — and the Jacobian there has an eigenvalue in the right half-plane. That single fact is why this is a control problem and not a trajectory-generation problem.
-
-The controller solves, at every timestep, a finite-horizon optimal control problem and applies only its first move:
-
-$$
-\begin{aligned}
-\min_{u_{0:N-1}} \quad & \sum_{k=0}^{N-1} \underbrace{\|x_k - x^\star\|_Q^2}_{\text{stay in the drift}} + \underbrace{\|u_k - u^\star\|_R^2}_{\text{don't thrash the actuators}} \;+\; \underbrace{\|x_N - x^\star\|_P^2}_{\text{terminal cost}} \\[4pt]
-\text{s.t.}\quad & x_{k+1} = f(x_k, u_k), \qquad x_0 = x(t) \\
-& u_k \in \mathcal{U}, \quad x_k \in \mathcal{X}, \quad x_N \in \mathcal{X}_f
-\end{aligned}
-$$
-
-Then throw the rest away, re-measure, and solve again. That last part — **re-solving from the true state, every few milliseconds** — is what makes MPC work on an unstable equilibrium: the feedback loop closes faster than the instability can grow, and the constraint sets $\mathcal{U}, \mathcal{X}$ let me write down "the steering rack physically stops here" as a first-class part of the problem instead of a hack.
+MPC gets the car sideways, but it can't hand you a certificate. The direction I'm most excited about is learning a controller **and** a proof of its stability at the same time: a neural network policy trained alongside a neural **Lyapunov function** — an energy-like scalar that must decrease along every trajectory. A verifier hunts for states where that condition fails, feeds the counterexamples back into training, and the loop repeats until none can be found. What comes out is not just a policy that worked in testing, but one with a certified region where stability and safety are guaranteed — fast enough to run on a real car, and expressive enough to use the nonlinear regime that makes drifting possible.
 
 ## The platform
 
-Everything gets validated on hardware: a **Traxxas 1:10 Mustang** RC platform, because a car that only drifts in simulation is a screensaver.
+Everything gets validated on hardware — a **Traxxas 1:10 Mustang** RC car, because a car that only drifts in simulation is a screensaver. Current work at [CARA LAB](https://cara-lab-rice.github.io/) focuses on automated vehicle control beyond stability limits, with results coming soon.
 
-Current work at [CARA LAB](https://cara-lab-rice.github.io/) focuses on automated vehicle control beyond stability limits — results coming soon.
-
-[![Autonomous RC Car Drift Demo](https://drive.google.com/file/d/1UGKPXjGwz7lvS_XDcLGZ2pr7NxeT5Hwm/view?usp=drive_link)
-
-*Autonomous drift control on the Traxxas 1:10 platform.*
+▶️ [**Watch: autonomous drift control on the Traxxas 1:10 platform**](https://drive.google.com/file/d/1UGKPXjGwz7lvS_XDcLGZ2pr7NxeT5Hwm/view?usp=drive_link)
 
 ***
 
 # Undergraduate Research
 
-My undergraduate research focused on the **design of mechatronic systems and the rapid prototyping** of robotic and medical devices, with an emphasis on translating engineering concepts into functional, experimentally validated hardware — work at the intersection of mechanical design, modeling, and applied engineering for biomedical and robotic applications.
-
-**Representative projects:**
+My undergraduate work focused on the **design of mechatronic systems and rapid prototyping** of robotic and medical devices — translating engineering concepts into functional, experimentally validated hardware.
 
 1. [Minimally invasive healing of bone implant–cement interfaces by aerogel cement and remote heating](https://doi.org/10.1016/j.device.2024.100680)
 
@@ -88,7 +59,7 @@ My undergraduate research focused on the **design of mechatronic systems and the
 
 3. Senior Design — [An Implantable Finger Prosthetic](https://kaijiasresearch.godaddysites.com/finger-prosthetic)
 
-More detail on these is available on my [undergraduate website](https://kaijiasresearch.godaddysites.com/).
+More detail on my [undergraduate website](https://kaijiasresearch.godaddysites.com/).
 
 ***
 
