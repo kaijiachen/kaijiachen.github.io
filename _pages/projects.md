@@ -64,28 +64,6 @@ $$
 
 Then throw the rest away, re-measure, and solve again. That last part — **re-solving from the true state, every few milliseconds** — is what makes MPC work on an unstable equilibrium: the feedback loop closes faster than the instability can grow, and the constraint sets $\mathcal{U}, \mathcal{X}$ let me write down "the steering rack physically stops here" as a first-class part of the problem instead of a hack.
 
-The open question is what MPC alone cannot give you: a *certificate*. Recursive feasibility and stability guarantees rest on the model, and the model is exactly what's uncertain at the limit.
-
-## What's next: neural Lyapunov control with guarantees
-
-The direction I'm most excited about is closing that gap — learning a controller **and** a proof of its stability at the same time.
-
-The idea: parameterize both a control policy $\pi_\theta$ and a candidate Lyapunov function $V_\theta$ as neural networks, and train them jointly against the Lyapunov conditions themselves:
-
-$$
-V_\theta(x^\star) = 0,\qquad V_\theta(x) > 0,\qquad \dot{V}_\theta(x) = \nabla V_\theta(x)^\top f\big(x, \pi_\theta(x)\big) \;\le\; -c\,V_\theta(x)
-$$
-
-for all $x$ in a region of attraction $\mathcal{D}$. Violations of these become the training loss. The part that makes it more than curve fitting is **verification**: a falsifier (SMT-based, or via Lipschitz/bound-propagation arguments) searches $\mathcal{D}$ for counterexamples, feeds them back into training, and the loop repeats until none can be found. What comes out is not just a policy that worked on the test set — it's a policy with a certified region of attraction.
-
-Pair that with a safety filter (control barrier functions) that can override the learned policy whenever it would leave the certified set, and the goal is a controller that is:
-
-- **expressive** enough to exploit the nonlinear, saturated regime that makes drifting possible,
-- **fast** enough to run in a real control loop (a network forward pass, not an online solve), and
-- **certified**, so "it works" is a theorem rather than an empirical claim.
-
-Getting neural Lyapunov methods to scale to real vehicle dynamics — with friction uncertainty, actuator limits, and hardware-in-the-loop validation — is where I'm headed next.
-
 ## The platform
 
 Everything gets validated on hardware: a **Traxxas 1:10 Mustang** RC platform, because a car that only drifts in simulation is a screensaver.
