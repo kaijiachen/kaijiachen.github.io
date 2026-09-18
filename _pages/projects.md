@@ -9,41 +9,41 @@ author_profile: true
 
 # Teaching a Car to Drift
 
-**The goal is simple to state and hard to do: make an autonomous car lose traction on purpose — and keep it exactly where I want it.**
+**The goal is simple to state and hard to do: make an autonomous car lose traction on purpose, and keep it exactly where I want it.**
 
-Most autonomous vehicles are built to never get near the edge: stay below the friction limit, keep the tires gripping, keep the math linear. That works right up until it doesn't — black ice, a child stepping out from behind a parked van, a truck jackknifing across two lanes. In those moments the safest move is often the one a rally driver would make: throw the car sideways and steer with the rear. Human experts do this with no model and no solver. My work is about giving a machine the same ability, with math behind it instead of intuition.
+Most autonomous vehicles are built to never get near the edge. Stay below the friction limit, keep the tires gripping, keep the math linear. That works right up until it doesn't: black ice, a child stepping out from behind a parked van, a truck jackknifing across two lanes. In those moments the safest move is often the one a rally driver would make, throwing the car sideways and steering with the rear. Human experts do this with no model and no solver. My work is about giving a machine the same ability, with math behind it instead of intuition.
 
 ## Why it's hard
 
-Drifting runs off the end of every assumption that makes vehicle control easy. The tires are **saturated**, so asking for more force gives you less — the linear machinery stops being valid exactly when you need it. The drift itself is a **real but unstable equilibrium**: left alone the car spins or straightens out within a fraction of a second, so holding a drift is closer to balancing an inverted pendulum than to following a lane. And the **model is never quite right** — tire-road friction changes with surface, temperature, and weather — while the decisions have to be made in tens of milliseconds, with steering and throttle already pinned near their limits.
+Drifting runs off the end of every assumption that makes vehicle control easy. The tires are **saturated**, so asking for more force gives you less, and the linear machinery stops being valid exactly when you need it. The drift itself is a **real but unstable equilibrium**: left alone, the car spins or straightens out within a fraction of a second, so holding a drift is closer to balancing an inverted pendulum than to following a lane. The **model is never quite right** either, since tire-road friction changes with surface, temperature, and weather. All of this has to be sorted out in tens of milliseconds, with steering and throttle already pinned near their limits.
 
 ## Why it's worth studying
 
 Everything past the friction limit is where crashes happen.
 
 - **Emergency maneuvers.** Avoiding an obstacle at highway speed can demand more lateral acceleration than a grip-limited controller is willing to ask for.
-- **Ice, snow, gravel, rain.** On low-friction surfaces, ordinary driving already lives at the limit — "never lose grip" isn't a strategy there.
+- **Ice, snow, gravel, rain.** On low-friction surfaces, ordinary driving already lives at the limit, so "never lose grip" isn't a strategy.
 - **Recovery, not just avoidance.** A car that's already sliding is *already* in the unstable regime. A controller that only knows the linear region has nothing useful to say.
-- **It generalizes.** The real question isn't cars: how do you guarantee performance in the regime where a robot's model is least trustworthy?
+- **It generalizes.** The real question isn't cars. It's how you guarantee performance in the regime where a robot's model is least trustworthy.
 
 ## The approach: model predictive control
 
-I steer the car toward a **drift equilibrium** $x^\star$ — a sideways state that the physics will sustain, but won't hold on its own. At every timestep the controller looks a short horizon into the future, picks the best sequence of moves, and applies only the first one:
+I steer the car toward a **drift equilibrium**, a sideways state that the physics will sustain but won't hold on its own. At every timestep the controller looks a short horizon into the future, picks the best sequence of moves, and applies only the first one:
 
 $$
 \min_{u_{0:N-1}} \; \sum_{k=0}^{N-1} \|x_k - x^\star\|_Q^2 + \|u_k - u^\star\|_R^2
 \quad \text{s.t.} \quad x_{k+1} = f(x_k, u_k), \;\; u_k \in \mathcal{U}
 $$
 
-Then it throws the rest away, re-measures, and solves again — thousands of times a minute. That constant re-planning is what makes it possible to sit on an unstable equilibrium: the feedback loop closes faster than the instability can grow, and the constraint set $\mathcal{U}$ encodes real limits ("the steering rack stops here") as part of the problem rather than as an afterthought.
+Then it throws the rest away, re-measures, and solves again, thousands of times a minute. That constant re-planning is what makes it possible to sit on an unstable equilibrium: the feedback loop closes faster than the instability can grow, and the constraint set $\mathcal{U}$ encodes real limits like "the steering rack stops here" as part of the problem rather than as an afterthought.
 
 ## What's next: learning with guarantees
 
-MPC gets the car sideways, but it can't hand you a certificate. The direction I'm most excited about is learning a controller **and** a proof of its stability at the same time: a neural network policy trained alongside a neural **Lyapunov function** — an energy-like scalar that must decrease along every trajectory. A verifier hunts for states where that condition fails, feeds the counterexamples back into training, and the loop repeats until none can be found. What comes out is not just a policy that worked in testing, but one with a certified region where stability and safety are guaranteed — fast enough to run on a real car, and expressive enough to use the nonlinear regime that makes drifting possible.
+MPC gets the car sideways, but it can't hand you a certificate. The direction I'm most excited about is learning a controller *and* a proof of its stability at the same time: a neural network policy trained alongside a neural **Lyapunov function**, an energy-like scalar that must decrease along every trajectory. A verifier hunts for states where that condition fails, feeds the counterexamples back into training, and the loop repeats until none can be found. What comes out is not just a policy that worked in testing, but one with a certified region where stability and safety are guaranteed, fast enough to run on a real car and expressive enough to use the nonlinear regime that makes drifting possible.
 
 ## The platform
 
-Everything gets validated on hardware — a **Traxxas 1:10 Mustang** RC car, because a car that only drifts in simulation is a screensaver. Current work at [CARA LAB](https://cara-lab-rice.github.io/) focuses on automated vehicle control beyond stability limits, with results coming soon.
+Everything gets validated on hardware, a **Traxxas 1:10 Mustang** RC car, because a car that only drifts in simulation is a screensaver. Current work at [CARA LAB](https://cara-lab-rice.github.io/) focuses on automated vehicle control beyond stability limits, with results coming soon.
 
 ▶️ [**Watch: autonomous drift control on the Traxxas 1:10 platform**](https://drive.google.com/file/d/1UGKPXjGwz7lvS_XDcLGZ2pr7NxeT5Hwm/view?usp=drive_link)
 
@@ -51,13 +51,13 @@ Everything gets validated on hardware — a **Traxxas 1:10 Mustang** RC car, bec
 
 # Undergraduate Research
 
-My undergraduate work focused on the **design of mechatronic systems and rapid prototyping** of robotic and medical devices — translating engineering concepts into functional, experimentally validated hardware.
+My undergraduate work focused on the **design of mechatronic systems and rapid prototyping** of robotic and medical devices, translating engineering concepts into functional, experimentally validated hardware.
 
-1. [Minimally invasive healing of bone implant–cement interfaces by aerogel cement and remote heating](https://doi.org/10.1016/j.device.2024.100680)
+1. [Minimally invasive healing of bone implant-cement interfaces by aerogel cement and remote heating](https://doi.org/10.1016/j.device.2024.100680)
 
 2. [Predicting biaxial failure strengths of aortic tissues using a dispersed fiber failure model](https://doi.org/10.1016/j.eml.2024.102287)
 
-3. Senior Design — [An Implantable Finger Prosthetic](https://kaijiasresearch.godaddysites.com/finger-prosthetic)
+3. Senior Design: [An Implantable Finger Prosthetic](https://kaijiasresearch.godaddysites.com/finger-prosthetic)
 
 More detail on my [undergraduate website](https://kaijiasresearch.godaddysites.com/).
 
@@ -65,6 +65,6 @@ More detail on my [undergraduate website](https://kaijiasresearch.godaddysites.c
 
 # Class Projects
 
-1. **Nonlinear System Analysis & Control** — [Control of a two-link robot manipulator](https://drive.google.com/file/d/1Pj5eOyawrSS5wAX1YZMAgVT9jrD7OW5Z/view?usp=sharing)
+1. **Nonlinear System Analysis & Control**: [Control of a two-link robot manipulator](https://drive.google.com/file/d/1Pj5eOyawrSS5wAX1YZMAgVT9jrD7OW5Z/view?usp=sharing)
 
-2. **Mechatronics** — [Omni-Wheel Robot](https://www.youtube.com/watch?v=egVPhuDyUTs)
+2. **Mechatronics**: [Omni-Wheel Robot](https://www.youtube.com/watch?v=egVPhuDyUTs)
