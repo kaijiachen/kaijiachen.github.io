@@ -37,10 +37,6 @@ $$
 
 Then it throws the rest away, re-measures, and solves again, thousands of times a minute. That constant re-planning is what makes it possible to sit on an unstable equilibrium: the feedback loop closes faster than the instability can grow, and the constraint set $\mathcal{U}$ encodes real limits like "the steering rack stops here" as part of the problem rather than as an afterthought.
 
-## What's next: learning with guarantees
-
-MPC gets the car sideways, but it can't hand you a certificate. The direction I'm most excited about is learning a controller *and* a proof of its stability at the same time: a neural network policy trained alongside a neural **Lyapunov function**, an energy-like scalar that must decrease along every trajectory. A verifier hunts for states where that condition fails, feeds the counterexamples back into training, and the loop repeats until none can be found. What comes out is not just a policy that worked in testing, but one with a certified region where stability and safety are guaranteed, fast enough to run on a real car and expressive enough to use the nonlinear regime that makes drifting possible.
-
 ## The platform
 
 Everything gets validated on hardware, a **Traxxas 1:10 Mustang** RC car, because a car that only drifts in simulation is a screensaver. Current work at [CARA LAB](https://cara-lab-rice.github.io/) focuses on automated vehicle control beyond stability limits, with results coming soon.
