@@ -54,9 +54,6 @@ Everything gets validated on hardware, a **Traxxas 1:10 Mustang** RC car, becaus
   />
 </div>
 
-
-▶️ [**Watch: autonomous drift control on the Traxxas 1:10 platform**](https://drive.google.com/file/d/1UGKPXjGwz7lvS_XDcLGZ2pr7NxeT5Hwm/view?usp=drive_link)
-
 ***
 
 # Undergraduate Research
