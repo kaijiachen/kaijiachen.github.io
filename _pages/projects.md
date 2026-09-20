@@ -7,7 +7,7 @@ author_profile: true
 
 ***
 
-# Teaching a Car to Drift
+# Teaching a Car to Drift - 1:10 Scale Ford Mustang 
 
 **The goal is simple to state and hard to do: make an autonomous car lose traction on purpose, and keep it exactly where I want it.**
 
@@ -40,6 +40,20 @@ Then it throws the rest away, re-measures, and solves again, thousands of times 
 ## The platform
 
 Everything gets validated on hardware, a **Traxxas 1:10 Mustang** RC car, because a car that only drifts in simulation is a screensaver. Current work at [CARA LAB](https://cara-lab-rice.github.io/) focuses on automated vehicle control beyond stability limits, with results coming soon.
+
+<div style="display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 3fr); gap: 16px; width: 100%; max-width: 480px; margin: 20px auto;">
+  <img
+    src="https://github.com/user-attachments/assets/b29d004a-ea3e-4342-8878-5146632a1036"
+    alt="MPC_Top_View"
+    style="display: block; width: 100%; height: auto; margin: 0;"
+  />
+  <img
+    src="https://github.com/user-attachments/assets/2e1b008f-2538-4a6f-9b64-3e5015f2854b"
+    alt="Autonomous MPC Drifting"
+    style="display: block; width: 100%; height: auto; margin: 0;"
+  />
+</div>
+
 
 ▶️ [**Watch: autonomous drift control on the Traxxas 1:10 platform**](https://drive.google.com/file/d/1UGKPXjGwz7lvS_XDcLGZ2pr7NxeT5Hwm/view?usp=drive_link)
 
