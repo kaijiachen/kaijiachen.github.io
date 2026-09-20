@@ -12,12 +12,11 @@ My research lies at the intersection of **robotics, control, and machine learnin
 
 **Currently: teaching a car to drift autonomously. 🏎️**
 
+[View my projects →](https://kaijiachen.github.io/projects/)
 <p align="center">
   <img width="280" height="280" alt="MPCDrift"
        src="https://github.com/user-attachments/assets/db3a3969-88d1-487b-bd15-55fcd707baaf" />
 </p>
-
-[View my projects →](https://kaijiachen.github.io/projects/)
 
 In Spring 2025, I completed my Bachelor’s degree at Vanderbilt University, where I majored in Mechanical Engineering with a minor in Computer Science. During my undergraduate studies, I researched with Dr. Xiaoguang Dong at the [Miniature Robotics Lab](https://sites.google.com/view/donglab) and Dr. David Braun at the [Advanced Robotics & Control Lab](https://davidbraunrobotics.com). I also interned twice at Coloplast Corp. as an R&D Engineer, working on the design and development of medical devices.
 
