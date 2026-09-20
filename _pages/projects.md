@@ -39,7 +39,7 @@ Then it throws the rest away, re-measures, and solves again, thousands of times 
 
 ## The platform
 
-Everything gets validated on hardware, a **Traxxas 1:10 Mustang** RC car, because a car that only drifts in simulation is a screensaver. Current work at [CARA LAB](https://cara-lab-rice.github.io/) focuses on automated vehicle control beyond stability limits, with results coming soon.
+Everything gets validated on hardware, a **Traxxas 1:10 Mustang** RC car, because a car that only drifts in simulation is a screensaver. 
 
 <div style="display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 3fr); gap: 16px; width: 100%; max-width: 480px; margin: 20px auto;">
   <img
@@ -49,7 +49,7 @@ Everything gets validated on hardware, a **Traxxas 1:10 Mustang** RC car, becaus
   />
   <img
     src="https://github.com/user-attachments/assets/2e1b008f-2538-4a6f-9b64-3e5015f2854b"
-    alt="Autonomous MPC Drifting"
+    alt="MoCapDrift"
     style="display: block; width: 100%; height: auto; margin: 0;"
   />
 </div>
