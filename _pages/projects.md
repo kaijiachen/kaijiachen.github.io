@@ -47,12 +47,11 @@ Everything gets validated on hardware, a **Traxxas 1:10 Mustang** RC car, becaus
     style="display: block; width: 100%; height: auto; margin: 0;"
   />
   <img
-    src="https://github.com/user-attachments/assets/2e1b008f-2538-4a6f-9b64-3e5015f2854b"
+    src="https://github.com/user-attachments/assets/44a5f7a4-8259-453f-8b0e-c4a499872493"
     alt="MoCapDrift"
     style="display: block; width: 100%; height: auto; margin: 0;"
   />
 </div>
-***
 
 # Undergraduate Research
 
