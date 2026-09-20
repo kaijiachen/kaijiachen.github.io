@@ -35,7 +35,7 @@ $$
 \quad \text{s.t.} \quad x_{k+1} = f(x_k, u_k), \;\; u_k \in \mathcal{U}
 $$
 
-Then it throws the rest away, re-measures, and solves again, thousands of times a minute. That constant re-planning is what makes it possible to sit on an unstable equilibrium: the feedback loop closes faster than the instability can grow, and the constraint set $\mathcal{U}$ encodes real limits like "the steering rack stops here" as part of the problem rather than as an afterthought.
+Then it throws the rest away, re-measures, and solves again, thousands of times a minute. That constant re-planning is what makes it possible to sit on an unstable equilibrium: the feedback loop closes faster than the instability can grow, and the constraint set encodes real limits like "the steering rack stops here" as part of the problem rather than as an afterthought.
 
 ## The platform
 
