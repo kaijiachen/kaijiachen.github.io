@@ -14,7 +14,7 @@ My research lies at the intersection of **robotics, control, and machine learnin
 
 [View my projects →](https://kaijiachen.github.io/projects/)
 
-<div style="display: grid; grid-template-columns: 4fr 3fr; gap: 20px; align-items: center; max-width: 673px; margin: 20px auto;">
+<div style="display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 3fr); gap: 16px; width: 100%; max-width: 480px; margin: 20px auto;">
   <img
     src="https://github.com/user-attachments/assets/9ea8c086-9478-4e0b-84c6-ce76b87a0c95"
     alt="RC Car Photo"
