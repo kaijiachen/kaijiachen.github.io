@@ -12,7 +12,7 @@ My research lies at the intersection of **robotics, control, and machine learnin
 
 **Currently: teaching a car to drift autonomously. 🏎️**
 
-<img width="720" height="720" alt="MPCDrift" src="https://github.com/user-attachments/assets/db3a3969-88d1-487b-bd15-55fcd707baaf" />
+<img width="280" height="280" alt="MPCDrift" src="https://github.com/user-attachments/assets/db3a3969-88d1-487b-bd15-55fcd707baaf" />
 
 [View my projects →](https://kaijiachen.github.io/projects/)
 
