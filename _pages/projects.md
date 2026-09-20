@@ -38,7 +38,6 @@ $$
 Then it throws the rest away, re-measures, and solves again, thousands of times a minute. That constant re-planning is what makes it possible to sit on an unstable equilibrium: the feedback loop closes faster than the instability can grow, and the constraint set encodes real limits like "the steering rack stops here" as part of the problem rather than as an afterthought.
 
 ## The platform
-
 Everything gets validated on hardware, a **Traxxas 1:10 Mustang** RC car, because a car that only drifts in simulation is a screensaver. 
 
 <div style="display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 3fr); gap: 16px; width: 100%; max-width: 480px; margin: 20px auto;">
@@ -53,7 +52,6 @@ Everything gets validated on hardware, a **Traxxas 1:10 Mustang** RC car, becaus
     style="display: block; width: 100%; height: auto; margin: 0;"
   />
 </div>
-
 ***
 
 # Undergraduate Research
