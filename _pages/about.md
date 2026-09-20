@@ -14,11 +14,18 @@ My research lies at the intersection of **robotics, control, and machine learnin
 
 [View my projects →](https://kaijiachen.github.io/projects/)
 
-<p align="center">
-  <img height="280" alt="RC Car Photo" src="https://github.com/user-attachments/assets/9ea8c086-9478-4e0b-84c6-ce76b87a0c95" />
-  &nbsp;&nbsp;&nbsp;
-  <img height="280" alt="Autonomous MPC Drifting" src="https://github.com/user-attachments/assets/2e1b008f-2538-4a6f-9b64-3e5015f2854b" />
-</p>
+<div style="display: grid; grid-template-columns: 4fr 3fr; gap: 20px; align-items: center; max-width: 673px; margin: 20px auto;">
+  <img
+    src="https://github.com/user-attachments/assets/9ea8c086-9478-4e0b-84c6-ce76b87a0c95"
+    alt="RC Car Photo"
+    style="display: block; width: 100%; height: auto; margin: 0;"
+  />
+  <img
+    src="https://github.com/user-attachments/assets/2e1b008f-2538-4a6f-9b64-3e5015f2854b"
+    alt="Autonomous MPC Drifting"
+    style="display: block; width: 100%; height: auto; margin: 0;"
+  />
+</div>
 
 In Spring 2025, I completed my Bachelor’s degree at Vanderbilt University, where I majored in Mechanical Engineering with a minor in Computer Science. During my undergraduate studies, I researched with Dr. Xiaoguang Dong at the [Miniature Robotics Lab](https://sites.google.com/view/donglab) and Dr. David Braun at the [Advanced Robotics & Control Lab](https://davidbraunrobotics.com). I also interned twice at Coloplast Corp. as an R&D Engineer, working on the design and development of medical devices.
 
