@@ -6,6 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
+<img width="314" height="400" alt="giphy" src="https://github.com/user-attachments/assets/ac86fe6d-fce0-48e6-aa4a-bdb4160a2fb8" />
 
 My name is Kaijia Chen, and I am a Ph.D. student in the Department of Mechanical Engineering at Rice University, advised by [Sasha Davydov](https://davydovalexander.github.io/) at [CARA Lab](https://cara-lab-rice.github.io/).
 
@@ -14,7 +15,7 @@ My research lies at the intersection of **robotics, control, and machine learnin
 **Currently: teaching a car to drift autonomously. 🏎️**
 
 <a href="https://kaijiachen.github.io/projects/">
-  <img src="<img width="314" height="400" alt="giphy" src="https://github.com/user-attachments/assets/171a395c-9eb6-4038-b21f-0d1a5f9d5f2e" />" alt="An RC car learning to drift autonomously using MPC" width="280">
+<img width="314" height="400" alt="giphy" src="https://github.com/user-attachments/assets/ac86fe6d-fce0-48e6-aa4a-bdb4160a2fb8" />
 </a>
 
 [View my projects →](https://kaijiachen.github.io/projects/)
