@@ -38,18 +38,18 @@ $$
 Future directions include neural network controllers with stability or safety guarantees and contraction-based control for reliable autonomous drifting.
 
 ## The platform
-Everything gets validated on hardware, a **Traxxas 1:10 Mustang** RC car, because a car that only drifts in simulation is a screensaver. 
+Everything is validated on a Traxxas 1:10 Mustang RC car to test performance under model mismatch, uncertainty, and real-world hardware constraints.
 
-<div style="display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 3fr); gap: 16px; width: 100%; max-width: 480px; margin: 20px auto;">
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; width: 100%; max-width: 480px; margin: 20px auto;">
   <img
     src="https://github.com/user-attachments/assets/b29d004a-ea3e-4342-8878-5146632a1036"
     alt="MPC_Top_View"
-    style="display: block; width: 100%; height: auto; margin: 0;"
+    style="display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: contain; margin: 0;"
   />
   <img
     src="https://github.com/user-attachments/assets/44a5f7a4-8259-453f-8b0e-c4a499872493"
     alt="MoCapDrift"
-    style="display: block; width: 100%; height: auto; margin: 0;"
+    style="display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: contain; margin: 0;"
   />
 </div>
 
