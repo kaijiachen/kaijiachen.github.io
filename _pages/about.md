@@ -16,6 +16,11 @@ My research lies at the intersection of **robotics, control, and machine learnin
 
 <div style="display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 3fr); gap: 16px; width: 100%; max-width: 480px; margin: 20px auto;">
   <img
+    src="https://github.com/user-attachments/assets/9ea8c086-9478-4e0b-84c6-ce76b87a0c95"
+    alt="RC Car Photo"
+    style="display: block; width: 100%; height: auto; margin: 0;"
+  />
+  <img
     src="https://github.com/user-attachments/assets/2e1b008f-2538-4a6f-9b64-3e5015f2854b"
     alt="Autonomous MPC Drifting"
     style="display: block; width: 100%; height: auto; margin: 0;"
