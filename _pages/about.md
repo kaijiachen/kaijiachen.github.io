@@ -6,17 +6,13 @@ redirect_from:
   - /about/
   - /about.html
 ---
-<img width="314" height="400" alt="giphy" src="https://github.com/user-attachments/assets/ac86fe6d-fce0-48e6-aa4a-bdb4160a2fb8" />
-
 My name is Kaijia Chen, and I am a Ph.D. student in the Department of Mechanical Engineering at Rice University, advised by [Sasha Davydov](https://davydovalexander.github.io/) at [CARA Lab](https://cara-lab-rice.github.io/).
 
 My research lies at the intersection of **robotics, control, and machine learning**, with the broader goal of developing the next generation of autonomous systems that people can trust. I focus on data-driven control methods that enable fast, complex physical systems to operate safely, reliably, and predictably in uncertain environments.
 
 **Currently: teaching a car to drift autonomously. 🏎️**
 
-<a href="https://kaijiachen.github.io/projects/">
-<img width="314" height="400" alt="giphy" src="https://github.com/user-attachments/assets/ac86fe6d-fce0-48e6-aa4a-bdb4160a2fb8" />
-</a>
+<img width="720" height="720" alt="MPCDrift" src="https://github.com/user-attachments/assets/db3a3969-88d1-487b-bd15-55fcd707baaf" />
 
 [View my projects →](https://kaijiachen.github.io/projects/)
 
