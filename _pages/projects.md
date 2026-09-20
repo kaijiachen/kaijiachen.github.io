@@ -15,7 +15,7 @@ Most autonomous vehicles are built to never get near the edge. Stay below the fr
 
 ## Why it's hard
 
-Drifting runs off the end of every assumption that makes vehicle control easy. The tires are **saturated**, so asking for more force gives you less, and the linear machinery stops being valid exactly when you need it. The drift itself is a **real but unstable equilibrium**: left alone, the car spins or straightens out within a fraction of a second, so holding a drift is closer to balancing an inverted pendulum than to following a lane. The **model is never quite right** either, since tire-road friction changes with surface, temperature, and weather. All of this has to be sorted out in tens of milliseconds, with steering and throttle already pinned near their limits.
+Drifting pushes tires near their friction limits, where vehicle dynamics become **highly nonlinear**. Sustaining an unstable drift equilibrium requires fast feedback despite uncertain tire–road friction and limited steering and throttle authority.
 
 ## Why it's worth studying
 
@@ -26,15 +26,13 @@ Everything past the friction limit is where crashes happen.
 - **Recovery, not just avoidance.** A car that's already sliding is *already* in the unstable regime. A controller that only knows the linear region has nothing useful to say.
 - **It generalizes.** The real question isn't cars. It's how you guarantee performance in the regime where a robot's model is least trustworthy.
 
-## The approach: model predictive control
+## The approach: Real-time Optimization-based Controller
 
 I use model predictive control (MPC) to stabilize an RC car around a drift equilibrium, optimizing steering and throttle over a short horizon while respecting actuator limits:
-
 $$
 \min_{u_{0:N-1}} \; \sum_{k=0}^{N-1} \|x_k - x^\star\|_Q^2 + \|u_k - u^\star\|_R^2
 \quad \text{s.t.} \quad x_{k+1} = f(x_k, u_k), \;\; u_k \in \mathcal{U}
 $$
-
 Future directions include neural network controllers with stability or safety guarantees and contraction-based control for reliable autonomous drifting.
 
 ## The platform
