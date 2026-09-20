@@ -63,7 +63,7 @@ My undergraduate work focused on the **design of mechatronic systems and rapid p
 
 3. Senior Design: [An Implantable Finger Prosthetic](https://kaijiasresearch.godaddysites.com/finger-prosthetic)
 
-More detail on my [My previous website, built during undergrad](https://kaijiasresearch.godaddysites.com/).
+More detail on my [My old website, built during undergrad](https://kaijiasresearch.godaddysites.com/).
 
 ***
 
