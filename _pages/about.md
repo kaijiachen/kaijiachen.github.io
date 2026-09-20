@@ -12,8 +12,6 @@ My research lies at the intersection of **robotics, control, and machine learnin
 
 **Currently: teaching a car to drift autonomously. 🏎️**
 
-**Currently: teaching a car to drift autonomously. 🏎️**
-
 [View my projects →](https://kaijiachen.github.io/projects/)
 
 <p align="center">
