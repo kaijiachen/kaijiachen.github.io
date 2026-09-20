@@ -29,10 +29,12 @@ Everything past the friction limit is where crashes happen.
 ## The approach: Real-time Optimization-based Controller
 
 I use model predictive control (MPC) to stabilize an RC car around a drift equilibrium, optimizing steering and throttle over a short horizon while respecting actuator limits:
+
 $$
 \min_{u_{0:N-1}} \; \sum_{k=0}^{N-1} \|x_k - x^\star\|_Q^2 + \|u_k - u^\star\|_R^2
 \quad \text{s.t.} \quad x_{k+1} = f(x_k, u_k), \;\; u_k \in \mathcal{U}
 $$
+
 Future directions include neural network controllers with stability or safety guarantees and contraction-based control for reliable autonomous drifting.
 
 ## The platform
