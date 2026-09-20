@@ -28,14 +28,14 @@ Everything past the friction limit is where crashes happen.
 
 ## The approach: model predictive control
 
-I steer the car toward a **drift equilibrium**, a sideways state that the physics will sustain but won't hold on its own. At every timestep the controller looks a short horizon into the future, picks the best sequence of moves, and applies only the first one:
+I use model predictive control (MPC) to stabilize an RC car around a drift equilibrium, optimizing steering and throttle over a short horizon while respecting actuator limits:
 
 $$
 \min_{u_{0:N-1}} \; \sum_{k=0}^{N-1} \|x_k - x^\star\|_Q^2 + \|u_k - u^\star\|_R^2
 \quad \text{s.t.} \quad x_{k+1} = f(x_k, u_k), \;\; u_k \in \mathcal{U}
 $$
 
-Then it throws the rest away, re-measures, and solves again, thousands of times a minute. That constant re-planning is what makes it possible to sit on an unstable equilibrium: the feedback loop closes faster than the instability can grow, and the constraint set encodes real limits like "the steering rack stops here" as part of the problem rather than as an afterthought.
+Future directions include neural network controllers with stability or safety guarantees and contraction-based control for reliable autonomous drifting.
 
 ## The platform
 Everything gets validated on hardware, a **Traxxas 1:10 Mustang** RC car, because a car that only drifts in simulation is a screensaver. 
