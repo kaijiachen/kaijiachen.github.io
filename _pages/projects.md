@@ -25,8 +25,8 @@ In those moments the safest move is often the one a rally driver would make, thr
 ## Why it’s hard
 
 Drifting pushes tires near their friction limits, where vehicle dynamics become **highly nonlinear**. Sustaining an **unstable drift equilibrium** requires fast feedback despite uncertain tire–road friction and limited steering and throttle authority.
-
 <br clear="right">
+
 ## Why it's worth studying
 
 Everything past the friction limit is where crashes happen.
