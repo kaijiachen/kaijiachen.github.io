@@ -7,14 +7,14 @@ author_profile: true
 
 ***
 
-# Teaching a Car to Drift - 1:10 Scale Ford Mustang 
-
 <img
   align="right"
   width="31%"
   src="https://github.com/user-attachments/assets/696d1dde-e728-435d-94dd-5b22be82e498"
   alt="CARA Drift Poster"
 />
+
+# Teaching a Car to Drift - 1:10 Scale Ford Mustang 
 
 **The goal is simple to state and hard to do: make an autonomous car lose traction on purpose, and keep it exactly where I want it.**
 
