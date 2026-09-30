@@ -45,7 +45,7 @@ $$
 \quad \text{s.t.} \quad x_{k+1} = f(x_k, u_k), \;\; u_k \in \mathcal{U}
 $$
 
-Future directions include neural network controllers with stability or safety guarantees and contraction-based control for reliable autonomous drifting.
+Future directions include neural network controllers with **stability** or **safety guarantees** and contraction-based control for reliable autonomous drifting.
 
 ## The platform
 Everything is validated on a Traxxas 1:10 Mustang RC car to test performance under model mismatch, uncertainty, and real-world hardware constraints.
