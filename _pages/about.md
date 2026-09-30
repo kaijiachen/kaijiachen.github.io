@@ -25,6 +25,11 @@ My research lies at the intersection of **robotics, control, and machine learnin
     alt="Autonomous MPC Drifting"
     style="display: block; width: 100%; height: auto; margin: 0;"
   />
+  <img
+    src="https://github.com/user-attachments/assets/2ae473a4-42a4-41df-984e-360aae54400c"
+    alt="RC_front"
+    style="display: block; width: 100%; height: auto; margin: 0;"
+  />
 </div>
 
 In Spring 2025, I completed my Bachelor’s degree at Vanderbilt University, where I majored in Mechanical Engineering with a minor in Computer Science. During my undergraduate studies, I researched with Dr. Xiaoguang Dong at the [Miniature Robotics Lab](https://sites.google.com/view/donglab) and Dr. David Braun at the [Advanced Robotics & Control Lab](https://davidbraunrobotics.com). I also interned twice at Coloplast Corp. as an R&D Engineer, working on the design and development of medical devices.
