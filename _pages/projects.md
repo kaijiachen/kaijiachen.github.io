@@ -9,33 +9,24 @@ author_profile: true
 
 # Teaching a Car to Drift - 1:10 Scale Ford Mustang 
 
-<table>
-<tr>
-<td width="62%" valign="top">
+<img
+  align="right"
+  width="31%"
+  src="https://github.com/user-attachments/assets/696d1dde-e728-435d-94dd-5b22be82e498"
+  alt="CARA Drift Poster"
+/>
 
-<strong>The goal is simple to state and hard to do: make an autonomous car lose traction on purpose, and keep it exactly where I want it.</strong>
-
-<br><br>
+**The goal is simple to state and hard to do: make an autonomous car lose traction on purpose, and keep it exactly where I want it.**
 
 Most autonomous vehicles are built to never get near the edge. Stay below the friction limit, keep the tires gripping, keep the math linear. That works right up until it doesn't: black ice, a child stepping out from behind a parked van, a truck jackknifing across two lanes.
 
-<br><br>
-
 In those moments the safest move is often the one a rally driver would make, throwing the car sideways and steering with the rear. Human experts do this with no model and no solver. My work is about giving a machine the same ability, with math behind it instead of intuition.
 
-</td>
+<br clear="right">
 
-<td width="38%" valign="top" align="center">
+## Why it’s hard
 
-<img
-  src="https://github.com/user-attachments/assets/696d1dde-e728-435d-94dd-5b22be82e498"
-  alt="CARA Drift Poster"
-  width="300"
-/>
-
-</td>
-</tr>
-</table>
+Drifting pushes tires near their friction limits, where vehicle dynamics become **highly nonlinear**. Sustaining an **unstable drift equilibrium** requires fast feedback despite uncertain tire–road friction and limited steering and throttle authority.
 
 ## Why it's hard
 
