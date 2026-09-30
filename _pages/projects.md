@@ -9,12 +9,33 @@ author_profile: true
 
 # Teaching a Car to Drift - 1:10 Scale Ford Mustang 
 
-**The goal is simple to state and hard to do: make an autonomous car lose traction on purpose, and keep it exactly where I want it.**
+<table>
+<tr>
+<td width="62%" valign="top">
 
-Most autonomous vehicles are built to never get near the edge. Stay below the friction limit, keep the tires gripping, keep the math linear. That works right up until it doesn't: black ice, a child stepping out from behind a parked van, a truck jackknifing across two lanes. In those moments the safest move is often the one a rally driver would make, throwing the car sideways and steering with the rear. Human experts do this with no model and no solver. My work is about giving a machine the same ability, with math behind it instead of intuition.
+<strong>The goal is simple to state and hard to do: make an autonomous car lose traction on purpose, and keep it exactly where I want it.</strong>
 
-<img width="1587" height="2245" alt="CARA_Drift_Poster_preview" src="https://github.com/user-attachments/assets/696d1dde-e728-435d-94dd-5b22be82e498" />
+<br><br>
 
+Most autonomous vehicles are built to never get near the edge. Stay below the friction limit, keep the tires gripping, keep the math linear. That works right up until it doesn't: black ice, a child stepping out from behind a parked van, a truck jackknifing across two lanes.
+
+<br><br>
+
+In those moments the safest move is often the one a rally driver would make, throwing the car sideways and steering with the rear. Human experts do this with no model and no solver. My work is about giving a machine the same ability, with math behind it instead of intuition.
+
+</td>
+
+<td width="38%" valign="top" align="center">
+
+<img
+  src="https://github.com/user-attachments/assets/696d1dde-e728-435d-94dd-5b22be82e498"
+  alt="CARA Drift Poster"
+  width="300"
+/>
+
+</td>
+</tr>
+</table>
 
 ## Why it's hard
 
