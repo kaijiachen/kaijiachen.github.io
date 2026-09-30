@@ -13,6 +13,9 @@ author_profile: true
 
 Most autonomous vehicles are built to never get near the edge. Stay below the friction limit, keep the tires gripping, keep the math linear. That works right up until it doesn't: black ice, a child stepping out from behind a parked van, a truck jackknifing across two lanes. In those moments the safest move is often the one a rally driver would make, throwing the car sideways and steering with the rear. Human experts do this with no model and no solver. My work is about giving a machine the same ability, with math behind it instead of intuition.
 
+<img width="1587" height="2245" alt="CARA_Drift_Poster_preview" src="https://github.com/user-attachments/assets/696d1dde-e728-435d-94dd-5b22be82e498" />
+
+
 ## Why it's hard
 
 Drifting pushes tires near their friction limits, where vehicle dynamics become **highly nonlinear**. Sustaining an unstable drift equilibrium requires fast feedback despite uncertain tire–road friction and limited steering and throttle authority.
